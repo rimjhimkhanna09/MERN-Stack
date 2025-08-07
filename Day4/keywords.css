@@ -1,0 +1,20 @@
+*{
+    text-align: center;
+    background: lightskyblue;
+}
+h1{
+    background: black;
+    color: white;
+}
+button{
+    width: 100px;
+    font-size: 19px;
+    border-radius: 20px;
+    background: chartreuse;
+    transition: 1s;
+}
+button:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+body{
+    background: lightblue;
+    text-align: center;
+}
+@media(min-width:300px) and (max-width:500px){
+    body{
+        background: lightgreen;
+    }
+}
+@media(min-width:501px) and (max-width:700px){
+    body{
+        background: rgb(70, 171, 199);
+    }
+}
+@media(min-width:701px) and (max-width:1100px){
+    body{
+        background: rgb(179, 34, 162);
+    }
+}

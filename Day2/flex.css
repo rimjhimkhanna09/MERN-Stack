@@ -1,0 +1,28 @@
+*{
+    background: grey;
+}
+.box-1{
+    height: 150px;
+    width: 150px;
+    background: red;
+}
+.box-2{
+    height: 150px;
+    width: 150px;
+    background: blue;
+    flex-grow: 2;
+}
+.box-3{
+    height: 150px;
+    width: 150px;
+    background: black;
+    flex-shrink: 2;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    height: 100vh;
+    
+}

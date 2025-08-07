@@ -1,0 +1,21 @@
+body{
+    background: lightsalmon;
+    text-align: center;
+}
+h1{
+    background: lightblue;
+    color: darkblue;
+    border-radius: 20px;
+}
+div{
+    background: rgb(143, 70, 70);
+    height: 80px;   
+    border-radius: 20px;
+    margin: 10px;
+}
+#b{
+    background: maroon;
+}
+#c{
+background: darkslategray;
+}

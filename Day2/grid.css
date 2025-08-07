@@ -1,0 +1,23 @@
+*{
+    background: rgb(156, 58, 58);
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid-item{
+    background: lightgreen;
+    border: 2=1px solid black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#three{
+    grid-row: span 3;
+    grid-column: span 0;
+}
+#z{
+    grid-row: span 1;
+    grid-column: span 2;
+}

@@ -1,0 +1,53 @@
+body{
+    background: palevioletred;
+    text-align: center;
+}
+.a{
+    background: rgb(0, 3, 2);
+    height: 100px;
+    width: 100px;
+    position: relative;
+    /*transition: 3s;*/
+    animation: mybox 1s infinite alternate;
+
+}
+/* div:hover{
+    background: rgb(244, 247, 244);
+    cursor: pointer;
+    border-radius: 50%;
+} */
+@keyframes mybox{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+
+.box{
+    background: darkred;
+    height: 100px;
+    width: 100px;
+    margin-left: 500px;
+    margin-top: 200px;
+    animation-name: hii;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes hii{
+    0%{
+        transform: scale(1) rotate(0deg);
+        border-radius: 0%;
+    }
+    50%{
+        transform: scale(2) rotate(180deg);
+        border-radius: 50%;
+        background: blue;
+    }
+    100%{
+        transform: scale(3) rotate(360deg);
+        border-radius: 0%;
+        background: yellow;
+    }
+}

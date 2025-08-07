@@ -1,0 +1,13 @@
+body{
+    background-color: #f0f0f0;
+    text-align: center;
+}
+div{
+    margin-left: 43%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    height: 200px;
+    width: 200px;
+}
+

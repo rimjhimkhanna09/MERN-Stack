@@ -1,0 +1,26 @@
+body{
+    background: lightblue;
+}
+h1{
+    background: black;
+    color: yellow;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    text-align: center;
+}
+#a{
+    background: darkblue;
+}
+.z{
+    color: seagreen;
+}
+div{
+    background: rebeccapurple;
+    height: 200px;
+}
+span{
+    background: pink;
+    height: 200px;
+
+}
