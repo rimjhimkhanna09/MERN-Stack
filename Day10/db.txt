@@ -24,8 +24,45 @@ db.collection.find({}, {_id: 0})         // Show all documents, hide _id field
 db.collection.find({}, {_id: 0})    // Projection to hide _id
   .sort({key: 1})                   // Sort by 'key' in ascending order (use -1 for descending)
   .limit(5)                         // Limit to 5 results
+// Hide _id field in results
+db.collection.find({}, {_id:0})
 
+// Hide _id and post fields, sort by salary descending
+db.emp.find({}, {_id:0, post:0}).sort({ salary: -1 })
 
+// Sort and limit results
+db.emp.find({}, {_id:0, post:0}).sort({ salary: -1 }).limit(3)
+db.emp.find({}, {_id:0, post:0}).sort({ salary: -1 }).limit(2).skip(1)
+
+// Find by key/value
+db.emp.find({ key: "value" })
+
+// Find where name is NOT "Value"
+db.emp.find({ name: { $ne: "Value" } })
+
+// Find salary less than num
+db.emp.find({ salary: { $lt: num } })
+
+// Find salary greater than num
+db.emp.find({ salary: { $gt: num } })
+
+// Find salary between two values
+db.emp.find({ salary: { $gt: 25000, $lt: 50000 } })
+
+// Find salary between two values and name is 'Anil'
+db.emp.find({ salary: { $gt: 25000, $lt: 70000 }, name: 'Anil' })
+
+// Update: unset a field
+db.emp.updateOne({ key: "value" }, { $unset: { anyField: "" } })
+
+// Update many: rename a field
+db.emp.updateMany({}, { $rename: { "oldValue": "newValue" } })
+
+// Delete many: where anyValue exists
+db.emp.deleteMany({ anyValue: { $exists: true } })
+
+// Find with projection (hide _id)
+db.emp.find({ salary: { $gt: 25000, $lt: 70000 }, name: 'Anil' }, { _id: 0 })
 
 MONGO db commands
 mongod --version
@@ -46,4 +83,21 @@ db.collection.countDocuments()
 db.collection.count
 
 query n projection
-db.collection.find({} , {_id : 0})
+db.collection.find({},{_id:0})  0 == no and 1 == yes
+db.emp.find({},{_id:0,post :0}).sort({ salary : -1}) 1 == asc -1 == desc
+
+db.emp.find({},{_id:0,post :0}).sort({ salary : -1}).limit(3)
+db.emp.find({},{_id:0,post :0}).sort({ salary : -1}).limit(2).skip(1)
+
+db.emp.find({ key : "value"})
+db.emp.find({ name :{$ne: "Value"}})
+
+db.emp.find({ salary :{ $lt : num}})
+db.emp.find({ salary :{ $gt : num}})
+
+db.emp.find({ salary : { $gt : 25000, $lt: 50000}})
+db.emp.find({ salary : { $gt : 25000, $lt: 70000}, name : 'Anil'})
+db.emp.updateOne({ key : "value"},{$unset : { anyField : ""}})
+db.emp.updateMany({},{$rename : {"oldValue" : "newValue"}})
+db.emp.deleteMany({ anyValue : {$exists : true }})
+db.emp.find({ salary : { $gt : 25000, $lt: 70000}, name : 'Anil'},{_id:0})
