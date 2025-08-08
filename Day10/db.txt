@@ -1,0 +1,49 @@
+MONGO db commands (for mac)
+
+sudo mongod --dbpath=/Users/rimjhimkhanna/data/db
+show dbs                                 // Show all databases
+use mydb                                 // Switch to (or create) database 'mydb'
+show collections                         // Show all collections in current db
+
+db.collection.insertOne({key: 'value'})  // Insert a document
+db.collection.find()                     // Show all documents
+db.collection.updateOne(
+  {key: 'value'}, 
+  {$set: {key: 'newValue'}}
+)                                        // Update a document
+
+db.collection.deleteOne({key: 'value'})  // Delete a document
+db.collection.drop()                     // Drop the collection
+db.dropDatabase()                        // Drop the current database
+
+db.collection.countDocuments()           // Count documents in collection
+db.collection.count()                    // (Deprecated) Count documents
+
+// Query and projection example:
+db.collection.find({}, {_id: 0})         // Show all documents, hide _id field
+db.collection.find({}, {_id: 0})    // Projection to hide _id
+  .sort({key: 1})                   // Sort by 'key' in ascending order (use -1 for descending)
+  .limit(5)                         // Limit to 5 results
+
+
+
+MONGO db commands
+mongod --version
+
+mongosh 
+show db = show all the dbs
+use db
+show collections 
+db.collection.find() //read get
+db.collection.insertOne({key : 'value'})
+db.collection.find()
+db.collection.updateOne({key : 'value'}, {$set: {key : 'value'}}) //update
+db.collection.deleteOne({key : 'value'}) //delete
+db.collection.drop()
+db.dropdatabase()
+
+db.collection.countDocuments()
+db.collection.count
+
+query n projection
+db.collection.find({} , {_id : 0})
