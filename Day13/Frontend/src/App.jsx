@@ -11,7 +11,7 @@ export default function App(){
       <h1 className='text-center mb-b'>Book Manager</h1>
       <nav className='mb-4'>
         <Link to="/" className='btn btn-primary me-2'>Book List</Link>
-        <Link to="/create" className='btn btn-success'>Book List</Link>
+        <Link to="/create" className='btn btn-success'>Add Book </Link>
       </nav>
 
       <Routes>
