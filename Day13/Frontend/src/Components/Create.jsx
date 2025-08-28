@@ -12,7 +12,8 @@ export default function Create() {
   })
 
   const navigate = useNavigate()
-  const API_URL = "http://localhost:5001/books"
+  //const API_URL = "http://localhost:5001/books"
+  const API_URL = "https://mern-stack-f2se.onrender.com/books"
 
   const handlesubmit = async (e) => {
     e.preventDefault()

@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 export default function List() {
     const[books,setBooks] = React.useState([])
 
-    const API_URL = "http://localhost:5001/books"
+    //const API_URL = "http://localhost:5001/books"
+    const API_URL = "https://mern-stack-f2se.onrender.com/books"
+
 
     useEffect(()=>{
         axios.get(API_URL)
